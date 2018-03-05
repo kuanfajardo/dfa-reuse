@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0523F381A7D79F69242847 /* Pods_Reuse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0693D627A6EAB43C2249006 /* Pods_Reuse.framework */; };
 		561D097B204CE1FC002C9888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D097A204CE1FC002C9888 /* AppDelegate.swift */; };
 		561D097D204CE1FC002C9888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D097C204CE1FC002C9888 /* ViewController.swift */; };
 		561D0980204CE1FD002C9888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561D097E204CE1FC002C9888 /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 		561D0984204CE1FD002C9888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561D0987204CE1FD002C9888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		561D0989204CE1FD002C9888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4A732A61A9EF18D2A035933 /* Pods-Reuse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reuse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reuse/Pods-Reuse.debug.xcconfig"; sourceTree = "<group>"; };
+		E0693D627A6EAB43C2249006 /* Pods_Reuse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reuse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B0EBBF098DA80CB10F07CC /* Pods-Reuse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reuse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reuse/Pods-Reuse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0523F381A7D79F69242847 /* Pods_Reuse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				561D0979204CE1FC002C9888 /* Reuse */,
 				561D0978204CE1FC002C9888 /* Products */,
+				8D6CAF090DF7AFF6ED94786A /* Pods */,
+				BD05BA6B54714573EB70A357 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = Reuse;
 			sourceTree = "<group>";
 		};
+		8D6CAF090DF7AFF6ED94786A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4A732A61A9EF18D2A035933 /* Pods-Reuse.debug.xcconfig */,
+				E9B0EBBF098DA80CB10F07CC /* Pods-Reuse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BD05BA6B54714573EB70A357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0693D627A6EAB43C2249006 /* Pods_Reuse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 561D098C204CE1FD002C9888 /* Build configuration list for PBXNativeTarget "Reuse" */;
 			buildPhases = (
+				A3EED4F626D28822F7D10AB1 /* [CP] Check Pods Manifest.lock */,
 				561D0973204CE1FC002C9888 /* Sources */,
 				561D0974204CE1FC002C9888 /* Frameworks */,
 				561D0975204CE1FC002C9888 /* Resources */,
+				5AFA778A85FF829FC866BA90 /* [CP] Embed Pods Frameworks */,
+				16711A11DE428751EAD05E18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,68 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16711A11DE428751EAD05E18 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reuse/Pods-Reuse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AFA778A85FF829FC866BA90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Reuse/Pods-Reuse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AIFlatSwitch/AIFlatSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AIFlatSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZSwiftExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reuse/Pods-Reuse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3EED4F626D28822F7D10AB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reuse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		561D0973204CE1FC002C9888 /* Sources */ = {
@@ -276,6 +365,7 @@
 		};
 		561D098D204CE1FD002C9888 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A732A61A9EF18D2A035933 /* Pods-Reuse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +381,7 @@
 		};
 		561D098E204CE1FD002C9888 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9B0EBBF098DA80CB10F07CC /* Pods-Reuse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
