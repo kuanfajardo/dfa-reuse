@@ -3,18 +3,18 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - EZSwiftExtensions (1.10)
+  - EZSwiftExtensions (1.11)
   - Material (2.6.3):
     - Material/Core (= 2.6.3)
   - Material/Core (2.6.3)
-  - SnapKit (3.2.0)
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - AIFlatSwitch (~> 1.0.1)
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - EZSwiftExtensions
   - Material (~> 2.0)
-  - SnapKit
+  - SnapKit (~> 4.0.0)
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -28,10 +28,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AIFlatSwitch: 5ab22806eeff3e09d585c2f13d22bfa6e3427191
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  EZSwiftExtensions: 172160bfb3635161c8b833d9111961ff3e6f517d
+  EZSwiftExtensions: 84000042202d9fd574f626cda3064143f27fa767
   Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 6278b000561b42806e1f58242d240e9439c9ca2c
+PODFILE CHECKSUM: 9132e80905722c7770aa5125e2d624a25ba97dab
 
 COCOAPODS: 1.4.0
