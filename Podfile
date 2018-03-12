@@ -9,9 +9,16 @@ target 'Reuse' do
 
   # Pods for Reuse
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
-  pod 'EZSwiftExtensions' # NO SWIFT 4 SUPPORT!
+  pod 'EZSwiftExtensions' 		# NO SWIFT 4 SUPPORT!
   pod 'Material', '~> 2.0'
   pod 'SnapKit', '~> 4.0.0'
   pod 'AIFlatSwitch', '~> 1.0.1'
+
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Messaging'
+
+  pod 'SwiftyJSON'
 
 end

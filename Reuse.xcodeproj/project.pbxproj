@@ -18,8 +18,13 @@
 		5660D6CA20504A8000743E1D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660D6C920504A8000743E1D /* Extensions.swift */; };
 		5660D6CC20504ACC00743E1D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660D6CB20504ACC00743E1D /* Session.swift */; };
 		5660D6CF20504CFB00743E1D /* ColorTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5660D6CE20504CFB00743E1D /* ColorTheme.xcassets */; };
+<<<<<<< HEAD
 		76BE022120561009001BE602 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE022020561009001BE602 /* ItemViewController.swift */; };
+=======
+		56C2C6A22055F6E600CF981E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2C6A12055F6E600CF981E /* User.swift */; };
+>>>>>>> 536f49c7c710cb7ebec3f985ff063ffb0cbff71e
 		76D1A9322054D64300A1A4E2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1A9312054D64300A1A4E2 /* Item.swift */; };
+		96589F6120561278005B8832 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96589F6020561278005B8832 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +40,13 @@
 		5660D6C920504A8000743E1D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5660D6CB20504ACC00743E1D /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		5660D6CE20504CFB00743E1D /* ColorTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorTheme.xcassets; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		76BE022020561009001BE602 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+=======
+		56C2C6A12055F6E600CF981E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+>>>>>>> 536f49c7c710cb7ebec3f985ff063ffb0cbff71e
 		76D1A9312054D64300A1A4E2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Reuse/Item.swift; sourceTree = SOURCE_ROOT; };
+		96589F6020561278005B8832 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D4A732A61A9EF18D2A035933 /* Pods-Reuse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reuse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reuse/Pods-Reuse.debug.xcconfig"; sourceTree = "<group>"; };
 		E0693D627A6EAB43C2249006 /* Pods_Reuse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reuse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B0EBBF098DA80CB10F07CC /* Pods-Reuse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reuse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reuse/Pods-Reuse.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,7 +93,11 @@
 				561D097A204CE1FC002C9888 /* AppDelegate.swift */,
 				76D1A9312054D64300A1A4E2 /* Item.swift */,
 				561D097E204CE1FC002C9888 /* Main.storyboard */,
+<<<<<<< HEAD
 				76BE022020561009001BE602 /* ItemViewController.swift */,
+=======
+				96589F6020561278005B8832 /* RegisterViewController.swift */,
+>>>>>>> 536f49c7c710cb7ebec3f985ff063ffb0cbff71e
 				561D0986204CE1FD002C9888 /* LaunchScreen.storyboard */,
 			);
 			path = Reuse;
@@ -103,6 +117,7 @@
 				5660D6C720504A7600743E1D /* Errors.swift */,
 				5660D6C920504A8000743E1D /* Extensions.swift */,
 				5660D6CB20504ACC00743E1D /* Session.swift */,
+				56C2C6A12055F6E600CF981E /* User.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -236,18 +251,40 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Reuse/Pods-Reuse-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AIFlatSwitch/AIFlatSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AIFlatSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZSwiftExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -279,11 +316,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96589F6120561278005B8832 /* RegisterViewController.swift in Sources */,
 				5660D6CC20504ACC00743E1D /* Session.swift in Sources */,
 				76BE022120561009001BE602 /* ItemViewController.swift in Sources */,
 				561D0983204CE1FD002C9888 /* Reuse.xcdatamodeld in Sources */,
 				5660D6CA20504A8000743E1D /* Extensions.swift in Sources */,
 				5660D6C820504A7600743E1D /* Errors.swift in Sources */,
+				56C2C6A22055F6E600CF981E /* User.swift in Sources */,
 				76D1A9322054D64300A1A4E2 /* Item.swift in Sources */,
 				561D097B204CE1FC002C9888 /* AppDelegate.swift in Sources */,
 				5660D6C620504A6A00743E1D /* Constants.swift in Sources */,
