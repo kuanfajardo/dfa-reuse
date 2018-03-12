@@ -7,6 +7,13 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseStorage
+
+struct Constants {
+    static var db = Firestore.firestore()
+    static var st = Storage.storage()
+}
 
 struct FirebaseKeys {
     static let UserFirstName = "first_name"
