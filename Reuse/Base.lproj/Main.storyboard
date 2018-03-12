@@ -58,20 +58,50 @@
             <point key="canvasLocation" x="1929" y="1953"/>
         </scene>
         <!--Browse-->
-        <scene sceneID="VlX-aN-U3v">
+        <scene sceneID="6yT-4G-dGu">
             <objects>
-                <viewController title="Browse" id="zdg-Fh-0MW" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Bzm-Qt-iee">
+                <collectionViewController id="oFJ-Ht-Gb7" customClass="BrowseCollectionViewController" customModule="Reuse" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="NhR-AJ-oZh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="S1T-61-TSg"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Browse" image="BrowseIcon" selectedImage="BrowseIcon" id="AVr-Qb-AJU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aHv-v7-Phl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5km-vW-p5d">
+                            <size key="itemSize" width="94" height="97"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BrowseItemCell" id="ecm-le-S5E">
+                                <rect key="frame" x="0.0" y="50" width="94" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="94" height="97"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Nks-nA-Qvl">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9dQ-Hp-zdh">
+                                    <rect key="frame" x="0.0" y="-3" width="375" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="oFJ-Ht-Gb7" id="4yJ-Dw-TP0"/>
+                            <outlet property="delegate" destination="oFJ-Ht-Gb7" id="1mB-OQ-Dsk"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Browse" image="BrowseIcon" id="Ekr-rH-HVq"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YuC-o5-eu6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="395"/>
+            <point key="canvasLocation" x="1929" y="339"/>
         </scene>
         <!--Messages-->
         <scene sceneID="UVO-XT-aw9">
@@ -205,12 +235,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="kJp-pz-3dL" kind="custom" id="CTZ-Cj-PCe"/>
                         <segue destination="1fI-dd-53j" kind="relationship" relationship="viewControllers" id="bU5-AL-aoC"/>
                         <segue destination="XXg-Zn-MrZ" kind="relationship" relationship="viewControllers" id="z5j-90-I4n"/>
-                        <segue destination="zdg-Fh-0MW" kind="relationship" relationship="viewControllers" id="6LA-hp-VOa"/>
+                        <segue destination="oFJ-Ht-Gb7" kind="relationship" relationship="viewControllers" id="naf-kt-gbg"/>
                         <segue destination="Zzx-M7-l9N" kind="relationship" relationship="viewControllers" id="uqd-P9-bKn"/>
                         <segue destination="Qyd-XJ-kCg" kind="relationship" relationship="viewControllers" id="vpb-l8-FwZ"/>
-                        <segue destination="kJp-pz-3dL" kind="custom" id="CTZ-Cj-PCe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Eq-v1-OJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
