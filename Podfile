@@ -18,6 +18,7 @@ target 'Reuse' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
+  pod 'Firebase/Storage'
 
   pod 'SwiftyJSON'
 
