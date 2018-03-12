@@ -19,7 +19,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="JhV-Jj-NhS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Items" id="m9I-Hr-PkQ"/>
+                    <tabBarItem key="tabBarItem" title="Items" image="ItemsIcon" selectedImage="ItemsIcon" id="m9I-Hr-PkQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B7y-Su-qhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,7 +35,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="CHl-Go-IUc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" id="bXf-hK-jrd"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="NotificationIcon" selectedImage="NotificationIcon" id="bXf-hK-jrd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XY-Jx-0xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +51,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="lcI-GT-E9R"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="6Ea-a5-Ujd"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="ProfileIcon" selectedImage="ProfileIcon" id="6Ea-a5-Ujd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEG-Lm-9rT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,7 +67,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="S1T-61-TSg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Browse" id="AVr-Qb-AJU"/>
+                    <tabBarItem key="tabBarItem" title="Browse" image="BrowseIcon" selectedImage="BrowseIcon" id="AVr-Qb-AJU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHv-v7-Phl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +83,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Q73-re-v5z"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messages" id="opG-H8-js6"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="MessagesIcon" selectedImage="MessagesIcon" id="opG-H8-js6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iaz-mR-clg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,6 +218,13 @@
             <point key="canvasLocation" x="973" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BrowseIcon" width="25" height="25"/>
+        <image name="ItemsIcon" width="25" height="25"/>
+        <image name="MessagesIcon" width="25" height="25"/>
+        <image name="NotificationIcon" width="25" height="25"/>
+        <image name="ProfileIcon" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8C2-CX-Rvh"/>
     </inferredMetricsTieBreakers>
