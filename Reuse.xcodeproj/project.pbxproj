@@ -18,11 +18,8 @@
 		5660D6CA20504A8000743E1D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660D6C920504A8000743E1D /* Extensions.swift */; };
 		5660D6CC20504ACC00743E1D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660D6CB20504ACC00743E1D /* Session.swift */; };
 		5660D6CF20504CFB00743E1D /* ColorTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5660D6CE20504CFB00743E1D /* ColorTheme.xcassets */; };
-<<<<<<< HEAD
 		76BE022120561009001BE602 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE022020561009001BE602 /* ItemViewController.swift */; };
-=======
 		56C2C6A22055F6E600CF981E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2C6A12055F6E600CF981E /* User.swift */; };
->>>>>>> 536f49c7c710cb7ebec3f985ff063ffb0cbff71e
 		76D1A9322054D64300A1A4E2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1A9312054D64300A1A4E2 /* Item.swift */; };
 		96589F6120561278005B8832 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96589F6020561278005B8832 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -40,11 +37,8 @@
 		5660D6C920504A8000743E1D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5660D6CB20504ACC00743E1D /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		5660D6CE20504CFB00743E1D /* ColorTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorTheme.xcassets; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		76BE022020561009001BE602 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
-=======
 		56C2C6A12055F6E600CF981E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
->>>>>>> 536f49c7c710cb7ebec3f985ff063ffb0cbff71e
 		76D1A9312054D64300A1A4E2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Reuse/Item.swift; sourceTree = SOURCE_ROOT; };
 		96589F6020561278005B8832 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D4A732A61A9EF18D2A035933 /* Pods-Reuse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reuse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reuse/Pods-Reuse.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,11 +87,8 @@
 				561D097A204CE1FC002C9888 /* AppDelegate.swift */,
 				76D1A9312054D64300A1A4E2 /* Item.swift */,
 				561D097E204CE1FC002C9888 /* Main.storyboard */,
-<<<<<<< HEAD
 				76BE022020561009001BE602 /* ItemViewController.swift */,
-=======
 				96589F6020561278005B8832 /* RegisterViewController.swift */,
->>>>>>> 536f49c7c710cb7ebec3f985ff063ffb0cbff71e
 				561D0986204CE1FD002C9888 /* LaunchScreen.storyboard */,
 			);
 			path = Reuse;
@@ -318,7 +309,6 @@
 			files = (
 				96589F6120561278005B8832 /* RegisterViewController.swift in Sources */,
 				5660D6CC20504ACC00743E1D /* Session.swift in Sources */,
-				76BE022120561009001BE602 /* ItemViewController.swift in Sources */,
 				561D0983204CE1FD002C9888 /* Reuse.xcdatamodeld in Sources */,
 				5660D6CA20504A8000743E1D /* Extensions.swift in Sources */,
 				5660D6C820504A7600743E1D /* Errors.swift in Sources */,
