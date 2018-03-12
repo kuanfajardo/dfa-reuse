@@ -19,16 +19,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="JhV-Jj-NhS"/>
                     </view>
-<<<<<<< HEAD
-                    <tabBarItem key="tabBarItem" title="Items" id="m9I-Hr-PkQ"/>
-<<<<<<< HEAD
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-=======
                     <tabBarItem key="tabBarItem" title="Items" image="ItemsIcon" selectedImage="ItemsIcon" id="m9I-Hr-PkQ"/>
->>>>>>> 536f49c7c710cb7ebec3f985ff063ffb0cbff71e
-=======
->>>>>>> parent of a9ceb36... add itemviewcontroller and persist data for item class
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B7y-Su-qhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
