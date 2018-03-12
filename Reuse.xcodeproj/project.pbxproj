@@ -18,6 +18,7 @@
 		5660D6CA20504A8000743E1D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660D6C920504A8000743E1D /* Extensions.swift */; };
 		5660D6CC20504ACC00743E1D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660D6CB20504ACC00743E1D /* Session.swift */; };
 		5660D6CF20504CFB00743E1D /* ColorTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5660D6CE20504CFB00743E1D /* ColorTheme.xcassets */; };
+		76BE022120561009001BE602 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE022020561009001BE602 /* ItemViewController.swift */; };
 		76D1A9322054D64300A1A4E2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1A9312054D64300A1A4E2 /* Item.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		5660D6C920504A8000743E1D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5660D6CB20504ACC00743E1D /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		5660D6CE20504CFB00743E1D /* ColorTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorTheme.xcassets; sourceTree = "<group>"; };
+		76BE022020561009001BE602 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		76D1A9312054D64300A1A4E2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Reuse/Item.swift; sourceTree = SOURCE_ROOT; };
 		D4A732A61A9EF18D2A035933 /* Pods-Reuse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reuse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reuse/Pods-Reuse.debug.xcconfig"; sourceTree = "<group>"; };
 		E0693D627A6EAB43C2249006 /* Pods_Reuse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reuse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				561D097A204CE1FC002C9888 /* AppDelegate.swift */,
 				76D1A9312054D64300A1A4E2 /* Item.swift */,
 				561D097E204CE1FC002C9888 /* Main.storyboard */,
+				76BE022020561009001BE602 /* ItemViewController.swift */,
 				561D0986204CE1FD002C9888 /* LaunchScreen.storyboard */,
 			);
 			path = Reuse;
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5660D6CC20504ACC00743E1D /* Session.swift in Sources */,
+				76BE022120561009001BE602 /* ItemViewController.swift in Sources */,
 				561D0983204CE1FD002C9888 /* Reuse.xcdatamodeld in Sources */,
 				5660D6CA20504A8000743E1D /* Extensions.swift in Sources */,
 				5660D6C820504A7600743E1D /* Errors.swift in Sources */,
