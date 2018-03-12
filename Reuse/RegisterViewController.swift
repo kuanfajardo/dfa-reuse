@@ -22,7 +22,6 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return dorms[row]
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
