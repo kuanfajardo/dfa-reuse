@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct FirebaseKeys {
+    static let UserFirstName = "first_name"
+    static let UserLastName = "last_name"
+    static let UserDisplayName = "display_name"
+    static let UserGroups = "groups"
+}
