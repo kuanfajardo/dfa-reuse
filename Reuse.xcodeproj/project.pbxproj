@@ -20,6 +20,7 @@
 		5660D6CF20504CFB00743E1D /* ColorTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5660D6CE20504CFB00743E1D /* ColorTheme.xcassets */; };
 		76BE022120561009001BE602 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE022020561009001BE602 /* ItemViewController.swift */; };
 		567D063120572E490023D644 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 567D063020572E490023D644 /* GoogleService-Info.plist */; };
+		567D0635205748590023D644 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D0634205748590023D644 /* LoginViewController.swift */; };
 		56C2C6A22055F6E600CF981E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2C6A12055F6E600CF981E /* User.swift */; };
 		56C2C6A62056159B00CF981E /* BrowseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2C6A52056159B00CF981E /* BrowseCollectionViewController.swift */; };
 		76D1A9322054D64300A1A4E2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1A9312054D64300A1A4E2 /* Item.swift */; };
@@ -41,6 +42,8 @@
 		5660D6CE20504CFB00743E1D /* ColorTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorTheme.xcassets; sourceTree = "<group>"; };
 		76BE022020561009001BE602 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		567D063020572E490023D644 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		567D0633205745BB0023D644 /* Reuse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reuse.entitlements; sourceTree = "<group>"; };
+		567D0634205748590023D644 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		56C2C6A12055F6E600CF981E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		56C2C6A52056159B00CF981E /* BrowseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionViewController.swift; sourceTree = "<group>"; };
 		76D1A9312054D64300A1A4E2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Reuse/Item.swift; sourceTree = SOURCE_ROOT; };
@@ -83,6 +86,7 @@
 		561D0979204CE1FC002C9888 /* Reuse */ = {
 			isa = PBXGroup;
 			children = (
+				567D0633205745BB0023D644 /* Reuse.entitlements */,
 				561D0989204CE1FD002C9888 /* Info.plist */,
 				567D063020572E490023D644 /* GoogleService-Info.plist */,
 				5660D6CD20504CC100743E1D /* Resources */,
@@ -122,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				56C2C6A52056159B00CF981E /* BrowseCollectionViewController.swift */,
+				567D0634205748590023D644 /* LoginViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +194,11 @@
 					561D0976204CE1FC002C9888 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -232,9 +242,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Reuse/Pods-Reuse-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -249,9 +264,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Reuse/Pods-Reuse-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AIFlatSwitch/AIFlatSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
@@ -268,9 +286,12 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AIFlatSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZSwiftExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
@@ -324,6 +345,7 @@
 				76D1A9322054D64300A1A4E2 /* Item.swift in Sources */,
 				561D097B204CE1FC002C9888 /* AppDelegate.swift in Sources */,
 				5660D6C620504A6A00743E1D /* Constants.swift in Sources */,
+				567D0635205748590023D644 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +483,7 @@
 			baseConfigurationReference = D4A732A61A9EF18D2A035933 /* Pods-Reuse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Reuse/Reuse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SN5BFX4SD3;
 				INFOPLIST_FILE = Reuse/Info.plist;
@@ -478,6 +501,7 @@
 			baseConfigurationReference = E9B0EBBF098DA80CB10F07CC /* Pods-Reuse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Reuse/Reuse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SN5BFX4SD3;
 				INFOPLIST_FILE = Reuse/Info.plist;

@@ -20,8 +20,13 @@ target 'Reuse' do
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
 
-  pod 'SwiftyJSON'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Facebook'
+  pod 'FirebaseUI/Firestore'
 
+  pod 'FBSDKLoginKit'
+
+  pod 'SwiftyJSON'
 end
 
 post_install do |installer|

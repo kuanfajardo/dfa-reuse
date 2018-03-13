@@ -21,3 +21,7 @@ struct FirebaseKeys {
     static let UserDisplayName = "display_name"
     static let UserGroups = "groups"
 }
+
+struct VCNames {
+    static let tabController = "TabController"
+}

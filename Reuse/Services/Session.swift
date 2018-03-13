@@ -8,17 +8,21 @@
 
 import Foundation
 import Firebase
+import FirebaseAuthUI
+import FirebaseFacebookAuthUI
 
-class Session {
+class Session: NSObject {
     // Singleton Object
     static let session = Session()
     
     // Properties
-    var owner: Reuse.User?
-    
     static var owner: Reuse.User? {
         return Session.session.owner
     }
+    
+    var owner: Reuse.User?
+    var userReference: DocumentReference?
+    var authUI: FUIAuth?
     
     
     //---------------------------------------------+
@@ -26,11 +30,12 @@ class Session {
     //---------------------------------------------+
     
     // Private to prevent more than one instance of Session
-    private init() {}
+    private override init() {}
     
     // "Init" method; must be first method called when using a Session object
-    func initWithUser(_ user: Reuse.User, inDispatch dispatch: DispatchGroup? = nil) {
+    func initWithUser(_ user: Reuse.User, reference: DocumentReference){
         self.owner = user
+        self.userReference = reference
     }
     
     
@@ -38,28 +43,20 @@ class Session {
     //           MARK: Authentication             |
     //--------------------------------------------+
     
-    // TODO: to be replaced by some Kerberos-authenticating method
-    static func signIn(withEmail email: String, password: String, completion: @escaping (_ error: Error?) -> Void) -> Void {
-        Auth.auth().signIn(withEmail: email, password: password) { (user: FirebaseAuth.User?, error: Error?) in
-            if (error == nil) {
-                print("\n~~ Login Successful! ~~\n")
-                Session.completeLogin(user!, completion: completion)
-            } else {
-                completion(error)
-            }
-        }
-    }
-    
-    
+    // Called when return from Firebase with user object
     static func completeLogin(_ user: FirebaseAuth.User, completion: @escaping (_ error: Error?) -> Void) -> Void {
-        Constants.db.document("users/\(user.uid)").getDocument { (snapshot: DocumentSnapshot?, error: Error?) in
+        let userRef = Constants.db.document("users/\(user.uid)")
+        
+        userRef.getDocument { (snapshot: DocumentSnapshot?, error: Error?) in
             if error == nil {
                 let reuseUser = Reuse.User(snapshot: snapshot!)
                 
                 if let reuseUser = reuseUser {
-                    Session.session.initWithUser(reuseUser)
+                    Session.session.initWithUser(reuseUser, reference: userRef)
+                    completion(nil)
                 } else {
                     let error = NSError(domain: "Failure to instantiate Reuse user object from Firestore snapshot", code: 0, userInfo: nil)
+                    
                     completion(error)
                 }
             } else {
@@ -67,7 +64,6 @@ class Session {
             }
         }
     }
-
     
     
     //--------------------------------------------+
@@ -77,3 +73,4 @@ class Session {
     
     // TO BE IMPLEMENTED
 }
+

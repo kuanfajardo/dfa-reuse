@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import Firebase
+import FirebaseAuthUI
+import FirebaseFacebookAuthUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Configure Firebase
         FirebaseApp.configure()
         
+        // Configure FirebaseUI
+        let authUI = FUIAuth.defaultAuthUI()
+        let providers: [FUIAuthProvider] = [
+            FUIFacebookAuth()
+        ]
+        
+        authUI?.providers = providers
+        Session.session.authUI = authUI
+
         return true
     }
 
@@ -76,6 +87,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+    
+    
+    //  MARK: URL Handling
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        // Facebook Auth
+        let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
+        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+            return true
+        }
+        
+        // Other URL handling goes here.
+        return false
+    }
 
     // MARK: - Core Data Saving support
 
@@ -94,4 +118,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
 
