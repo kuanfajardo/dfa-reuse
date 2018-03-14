@@ -12,9 +12,12 @@ private let reuseIdentifier = "BrowseItemCell"
 
 class BrowseCollectionViewController: UICollectionViewController {
 
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.searchController = searchController
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
