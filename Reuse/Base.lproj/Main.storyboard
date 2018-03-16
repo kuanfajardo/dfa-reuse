@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -106,19 +107,83 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5km-vW-p5d">
-                            <size key="itemSize" width="94" height="97"/>
+                            <size key="itemSize" width="203" height="203"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BrowseItemCell" id="ecm-le-S5E">
-                                <rect key="frame" x="0.0" y="0.0" width="94" height="97"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BrowseItemCell" id="ecm-le-S5E" customClass="BrowseCollectionViewCell" customModule="Reuse" customModuleProvider="target">
+                                <rect key="frame" x="86" y="0.0" width="203" height="203"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="94" height="97"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="203" height="203"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoe" translatesAutoresizingMaskIntoConstraints="NO" id="YfQ-Xv-Au8">
+                                            <rect key="frame" x="0.0" y="0.0" width="203" height="203"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCG-PO-ABg" customClass="EdgeInsetLabel" customModule="Reuse" customModuleProvider="target">
+                                            <rect key="frame" x="154.5" y="168" width="40.5" height="27"/>
+                                            <color key="backgroundColor" red="0.0001623570267" green="0.00049571700509999997" blue="0.00024241533000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgj-iH-ur9" customClass="EdgeInsetLabel" customModule="Reuse" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="8" width="47.5" height="27"/>
+                                            <color key="backgroundColor" name="MintColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="YfQ-Xv-Au8" secondAttribute="bottom" id="1FD-xM-DtZ"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="GCG-PO-ABg" secondAttribute="bottom" id="Dkn-c4-ejv"/>
+                                    <constraint firstItem="GCG-PO-ABg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ecm-le-S5E" secondAttribute="leadingMargin" id="V8q-m9-HPO"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="GCG-PO-ABg" secondAttribute="trailing" id="ZIR-Zv-0In"/>
+                                    <constraint firstItem="YfQ-Xv-Au8" firstAttribute="top" secondItem="ecm-le-S5E" secondAttribute="top" id="n4J-E6-jwM"/>
+                                    <constraint firstAttribute="trailing" secondItem="YfQ-Xv-Au8" secondAttribute="trailing" id="nVu-Z7-VtD"/>
+                                    <constraint firstItem="fgj-iH-ur9" firstAttribute="leading" secondItem="ecm-le-S5E" secondAttribute="leadingMargin" id="rE7-m3-cOE"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fgj-iH-ur9" secondAttribute="trailingMargin" id="rjv-c7-MDO"/>
+                                    <constraint firstItem="YfQ-Xv-Au8" firstAttribute="leading" secondItem="ecm-le-S5E" secondAttribute="leading" id="vLs-zL-IaN"/>
+                                    <constraint firstItem="fgj-iH-ur9" firstAttribute="top" secondItem="ecm-le-S5E" secondAttribute="topMargin" id="xCV-iU-DBP"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="freeLabel" destination="fgj-iH-ur9" id="rJT-DQ-oPQ"/>
+                                    <outlet property="itemImage" destination="YfQ-Xv-Au8" id="bBD-SJ-XTJ"/>
+                                    <outlet property="priceLabel" destination="GCG-PO-ABg" id="O1U-GN-geb"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -434,8 +499,12 @@
         <image name="MessagesIcon" width="25" height="25"/>
         <image name="NotificationIcon" width="25" height="25"/>
         <image name="ProfileIcon" width="25" height="25"/>
+        <image name="shoe" width="900" height="600"/>
         <namedColor name="MintColor">
             <color red="0.18199999629999999" green="0.69400000569999998" blue="0.52999997139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="MintColor">
+            <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

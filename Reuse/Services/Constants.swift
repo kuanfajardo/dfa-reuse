@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseStorage
+import UIKit
 
 struct Constants {
     static var db = Firestore.firestore()
@@ -24,4 +25,13 @@ struct FirebaseKeys {
 
 struct VCNames {
     static let tabController = "TabController"
+}
+
+
+struct Images {
+    static let shoeImage = UIImage(named: "shoe")
+}
+
+struct Colors {
+    static let mintColor = UIColor(named: "MintColor")!
 }

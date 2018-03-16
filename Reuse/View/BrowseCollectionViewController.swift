@@ -11,21 +11,27 @@ import UIKit
 private let reuseIdentifier = "BrowseItemCell"
 
 class BrowseCollectionViewController: UICollectionViewController {
+    // Constants
+    fileprivate let itemsPerRow: CGFloat = 2
+    fileprivate let itemSpacing: CGFloat = 5
+    fileprivate let sectionInsets = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
 
+    
+    // Properties
     let searchController = UISearchController(searchResultsController: nil)
+    
+    // Storyboard
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.searchController = searchController
+        navigationItem.searchController?.searchBar.tintColor = Colors.mintColor
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
         // Do any additional setup after loading the view.
-        print("Loaded")
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,10 +64,35 @@ class BrowseCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BrowseCollectionViewCell
     
         // Configure the cell
-        cell.backgroundColor = UIColor.black
+        
+        // TODO: Populate with real data
+        cell.itemImage.image = Images.shoeImage
+        cell.priceLabel.text = "$100"
+        
+        
+        let rand = arc4random_uniform(2)
+        
+        if rand == 0 { // FREE
+            cell.priceLabel.isHidden = true
+            cell.freeLabel.isHidden = false
+        } else {
+            cell.priceLabel.isHidden = false
+            cell.freeLabel.isHidden = true
+        }
+        
+        // Customized Graphic Feature
+        cell.priceLabel.layer.masksToBounds = true
+        cell.priceLabel.layer.cornerRadius = 4
+        cell.priceLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        cell.priceLabel.setNeedsDisplay()
+        
+        cell.freeLabel.layer.masksToBounds = true
+        cell.freeLabel.layer.cornerRadius = 4
+        cell.freeLabel.setNeedsDisplay()
+        
         return cell
     }
 
@@ -97,3 +128,41 @@ class BrowseCollectionViewController: UICollectionViewController {
     */
 
 }
+
+
+extension BrowseCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        let paddingSpace = itemSpacing * (itemsPerRow - 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return itemSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return itemSpacing
+    }
+}
+
+
+
+
+
+
+
+
