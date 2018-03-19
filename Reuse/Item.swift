@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import FIRDatabase
 
 class Item {
     
     //MARK: Properties
+    
+    //Initialize firebase database
+    let ref = FIRDatabase.database().reference(withPath: "dfa-reuse")
     
     var title: String
     var location: String
@@ -49,7 +53,24 @@ class Item {
         self.description = description
         self.photos = photos
         self.seller = seller
+        
+        
+        //Records the item in each relevant section of the FireBase database
+        let itemDb = self.ref.child("items")
+        let tagsDb = self.ref.child("tags")
+        let userDb = self.ref.child("users").child(seller)
+        
+        itemDb.child(title).setValue(self.toAnyObject())                //All objects
+        userDb.child(title).setValue(self.toAnyObject())                //Categorized by user
+        
+        for tag in tags{
+            tagsDb.child(tag).child(title).setValue(self.toAnyObject()) //Categorized by tag
+        }
+        
+        
     
     }
+    
+    
     
 }
