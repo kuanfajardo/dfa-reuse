@@ -7,10 +7,31 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseStorage
+import UIKit
+
+struct Constants {
+    static var db = Firestore.firestore()
+    static var st = Storage.storage()
+}
 
 struct FirebaseKeys {
     static let UserFirstName = "first_name"
     static let UserLastName = "last_name"
     static let UserDisplayName = "display_name"
     static let UserGroups = "groups"
+}
+
+struct VCNames {
+    static let tabController = "TabController"
+}
+
+
+struct Images {
+    static let shoeImage = UIImage(named: "shoe")
+}
+
+struct Colors {
+    static let mintColor = UIColor(named: "MintColor")!
 }

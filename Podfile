@@ -18,7 +18,28 @@ target 'Reuse' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
+  pod 'Firebase/Storage'
+
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Facebook'
+  pod 'FirebaseUI/Firestore'
+
+  pod 'FBSDKLoginKit'
 
   pod 'SwiftyJSON'
-
 end
+
+post_install do |installer|
+    legacy_pods = ['EZSwiftExtensions', 'Material']
+
+    for pod in legacy_pods do
+        installer.pods_project.targets.each do |target|
+            if target.name == pod
+                target.build_configurations.each do |config|
+                    config.build_settings['SWIFT_VERSION'] = '3.2'
+                end
+            end
+        end
+    end
+end
+
