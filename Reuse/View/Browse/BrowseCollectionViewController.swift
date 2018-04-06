@@ -21,6 +21,10 @@ class BrowseCollectionViewController: UICollectionViewController {
     
     // Storyboard
     
+    // Filtering View
+    lazy var filteringTransitioningDelegate = FilteringPresentationManager()
+    var filterController: FilterFormViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,49 +34,35 @@ class BrowseCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        
         // Do any additional setup after loading the view.
-//        Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { (timer) in
-//            let tvc = MessagesTableViewController()
-//            tvc.tableView.frame = CGRect(x: 0 , y: self.view.frame.height, width: self.view.frame.width, height: self.view.frame.height)
-//
-//            self.view.addSubview(tvc.tableView)
-//
-//            tvc.tableView.frame = CGRect(x: 0 , y: self.view.frame.height / 2, width: self.view.frame.width, height: self.view.frame.height)
-//        }.fire()
-//
+        self.filterController = FilterFormViewController()
         
         // Set bar button item actions
-        for i in 0..<self.navigationItem.rightBarButtonItems!.count {
-            let barItem = self.navigationItem.rightBarButtonItems![i]
-            barItem.target = self
-            
-            switch i {
-                case 0:
-                    barItem.action = #selector(filterButtonPress)
-                case 1:
-                    barItem.action = #selector(freeButtonPress)
-                default:
-                    // Handle error
-                    print("Should not get here! Only 2 bar button items")
-            }
-        }
+        let freeBarButtonItem = self.navigationItem.rightBarButtonItems?[1]
+        freeBarButtonItem?.target = self
+        freeBarButtonItem?.action = #selector(freeButtonPress)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        // For Filtering
+        if segue.identifier == Segues.filterSegue {
+            let controller =  segue.destination as! UINavigationController
+            controller.transitioningDelegate = filteringTransitioningDelegate
+            controller.modalPresentationStyle = .custom
+            
+            controller.navigationBar.tintColor = Colors.mintColor
+        }
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 
@@ -121,14 +111,9 @@ class BrowseCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    @objc func filterButtonPress() -> Void {
-        print("Filter button was pressed")
-    }
-    
     @objc func freeButtonPress() -> Void {
         print("Free button was pressed")
     }
-    
 
     // MARK: UICollectionViewDelegate
 

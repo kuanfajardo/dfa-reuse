@@ -35,3 +35,7 @@ struct Images {
 struct Colors {
     static let mintColor = UIColor(named: "MintColor")!
 }
+
+struct Segues {
+    static let filterSegue = "ShowFilterMenu"
+}

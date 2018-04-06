@@ -10,10 +10,14 @@ import UIKit
 import Eureka
 
 class FilterFormViewController: FormViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Filter"
+        
+        SliderRow.defaultCellUpdate = { cell, row in cell.slider.tintColor = Colors.mintColor }
+        CheckRow.defaultCellUpdate = { cell, row in cell.tintColor = Colors.mintColor }
         
         // Make form
         form
@@ -25,6 +29,8 @@ class FilterFormViewController: FormViewController {
                 $0.options = ["Most Recent", "Price Low to High", "Price High to Low"]
                 $0.value = "Most Recent"
                 $0.selectorTitle = "Sort By"
+            }.onPresent { (from: FormViewController, to: SelectorViewController<SelectorRow<PushSelectorCell<String>>>) in
+                    to.selectableRowCellSetup = { cell, row in cell.tintColor = Colors.mintColor }
             }
         
         // Filtering
@@ -35,6 +41,8 @@ class FilterFormViewController: FormViewController {
                 row.options = ["All Categories", "Home and Living", "School Supplies", "Appliances", "Kitchen", "Clothes"]
                 row.value = "All Categories"
                 row.selectorTitle = "Categories"
+            }.onPresent { (from: FormViewController, to: SelectorViewController<SelectorRow<PushSelectorCell<String>>>) in
+                    to.selectableRowCellSetup = { cell, row in cell.tintColor = Colors.mintColor }
             }
             
             // Condition
@@ -43,7 +51,9 @@ class FilterFormViewController: FormViewController {
                 row.options = ["Any Condition", "New", "Like New", "Good", "Used", "Shit"]
                 row.value = "Any Condition"
                 row.selectorTitle = "Condition"
-            }
+                }.onPresent { (from: FormViewController, to: SelectorViewController<SelectorRow<PushSelectorCell<String>>>) in
+                    to.selectableRowCellSetup = { cell, row in cell.tintColor = Colors.mintColor }
+                }
         
             // Price
             // TODO : Add range slider

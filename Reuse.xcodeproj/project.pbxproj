@@ -23,6 +23,8 @@
 		567F04D1205C177F00C11D9F /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567F04D0205C177F00C11D9F /* MessagesTableViewController.swift */; };
 		567F04D3205C1D8E00C11D9F /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567F04D2205C1D8E00C11D9F /* MessagesTableViewCell.swift */; };
 		56B444F020771D8300070133 /* FilterFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B444EF20771D8300070133 /* FilterFormViewController.swift */; };
+		56B444F420773FB100070133 /* FilteringPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B444F320773FB100070133 /* FilteringPresentationManager.swift */; };
+		56B444F6207740EE00070133 /* FilteringPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B444F5207740EE00070133 /* FilteringPresentationController.swift */; };
 		56C0EB35205B636600CB8908 /* BrowseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C0EB34205B636600CB8908 /* BrowseCollectionViewCell.swift */; };
 		56C0EB37205B66D200CB8908 /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C0EB36205B66D200CB8908 /* EdgeInsetLabel.swift */; };
 		56C2C6A22055F6E600CF981E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2C6A12055F6E600CF981E /* User.swift */; };
@@ -52,6 +54,8 @@
 		567F04D0205C177F00C11D9F /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		567F04D2205C1D8E00C11D9F /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		56B444EF20771D8300070133 /* FilterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFormViewController.swift; sourceTree = "<group>"; };
+		56B444F320773FB100070133 /* FilteringPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringPresentationManager.swift; sourceTree = "<group>"; };
+		56B444F5207740EE00070133 /* FilteringPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringPresentationController.swift; sourceTree = "<group>"; };
 		56C0EB34205B636600CB8908 /* BrowseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionViewCell.swift; sourceTree = "<group>"; };
 		56C0EB36205B66D200CB8908 /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		56C2C6A12055F6E600CF981E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -161,9 +165,9 @@
 		567F04CD205C16D900C11D9F /* Browse */ = {
 			isa = PBXGroup;
 			children = (
+				56B444F220773F8E00070133 /* Filtering */,
 				56C2C6A52056159B00CF981E /* BrowseCollectionViewController.swift */,
 				56C0EB34205B636600CB8908 /* BrowseCollectionViewCell.swift */,
-				56B444EF20771D8300070133 /* FilterFormViewController.swift */,
 			);
 			path = Browse;
 			sourceTree = "<group>";
@@ -183,6 +187,16 @@
 				567F04D2205C1D8E00C11D9F /* MessagesTableViewCell.swift */,
 			);
 			path = Messages;
+			sourceTree = "<group>";
+		};
+		56B444F220773F8E00070133 /* Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				56B444EF20771D8300070133 /* FilterFormViewController.swift */,
+				56B444F320773FB100070133 /* FilteringPresentationManager.swift */,
+				56B444F5207740EE00070133 /* FilteringPresentationController.swift */,
+			);
+			path = Filtering;
 			sourceTree = "<group>";
 		};
 		8D6CAF090DF7AFF6ED94786A /* Pods */ = {
@@ -386,6 +400,8 @@
 				5660D6CC20504ACC00743E1D /* Session.swift in Sources */,
 				561D0983204CE1FD002C9888 /* Reuse.xcdatamodeld in Sources */,
 				56C2C6A62056159B00CF981E /* BrowseCollectionViewController.swift in Sources */,
+				56B444F6207740EE00070133 /* FilteringPresentationController.swift in Sources */,
+				56B444F420773FB100070133 /* FilteringPresentationManager.swift in Sources */,
 				56C0EB37205B66D200CB8908 /* EdgeInsetLabel.swift in Sources */,
 				5660D6CA20504A8000743E1D /* Extensions.swift in Sources */,
 				6F2D2F26205F4AC300C2D889 /* ProfileViewController.swift in Sources */,
