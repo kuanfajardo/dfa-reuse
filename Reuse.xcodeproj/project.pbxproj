@@ -22,6 +22,7 @@
 		567D0635205748590023D644 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D0634205748590023D644 /* LoginViewController.swift */; };
 		567F04D1205C177F00C11D9F /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567F04D0205C177F00C11D9F /* MessagesTableViewController.swift */; };
 		567F04D3205C1D8E00C11D9F /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567F04D2205C1D8E00C11D9F /* MessagesTableViewCell.swift */; };
+		56B444F020771D8300070133 /* FilterFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B444EF20771D8300070133 /* FilterFormViewController.swift */; };
 		56C0EB35205B636600CB8908 /* BrowseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C0EB34205B636600CB8908 /* BrowseCollectionViewCell.swift */; };
 		56C0EB37205B66D200CB8908 /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C0EB36205B66D200CB8908 /* EdgeInsetLabel.swift */; };
 		56C2C6A22055F6E600CF981E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2C6A12055F6E600CF981E /* User.swift */; };
@@ -50,6 +51,7 @@
 		567D0634205748590023D644 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		567F04D0205C177F00C11D9F /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		567F04D2205C1D8E00C11D9F /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		56B444EF20771D8300070133 /* FilterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFormViewController.swift; sourceTree = "<group>"; };
 		56C0EB34205B636600CB8908 /* BrowseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionViewCell.swift; sourceTree = "<group>"; };
 		56C0EB36205B66D200CB8908 /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		56C2C6A12055F6E600CF981E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				56C2C6A52056159B00CF981E /* BrowseCollectionViewController.swift */,
 				56C0EB34205B636600CB8908 /* BrowseCollectionViewCell.swift */,
+				56B444EF20771D8300070133 /* FilterFormViewController.swift */,
 			);
 			path = Browse;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -332,6 +336,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZSwiftExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -387,6 +392,7 @@
 				5660D6C820504A7600743E1D /* Errors.swift in Sources */,
 				567F04D3205C1D8E00C11D9F /* MessagesTableViewCell.swift in Sources */,
 				56C0EB35205B636600CB8908 /* BrowseCollectionViewCell.swift in Sources */,
+				56B444F020771D8300070133 /* FilterFormViewController.swift in Sources */,
 				56C2C6A22055F6E600CF981E /* User.swift in Sources */,
 				567F04D1205C177F00C11D9F /* MessagesTableViewController.swift in Sources */,
 				76D1A9322054D64300A1A4E2 /* Item.swift in Sources */,

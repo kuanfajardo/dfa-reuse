@@ -15,6 +15,7 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - Eureka (4.1.0)
   - EZSwiftExtensions (1.11)
   - FBSDKCoreKit (4.31.0):
     - Bolts (~> 1.7)
@@ -119,6 +120,7 @@ PODS:
 DEPENDENCIES:
   - AIFlatSwitch (~> 1.0.1)
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - Eureka
   - EZSwiftExtensions
   - FBSDKLoginKit
   - Firebase/Auth
@@ -147,6 +149,7 @@ SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: 32764dbaf5f5888cf51fbaa172a010126b41bcd4
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Eureka: 5770ef95bbbbe52f8abbc0d9bea6ee8282c50209
   EZSwiftExtensions: 84000042202d9fd574f626cda3064143f27fa767
   FBSDKCoreKit: 54db4c581123745d25a9f7c1608020b3aeabd118
   FBSDKLoginKit: 95a252ddffd6919c0f132a02292f0824616d8709
@@ -172,6 +175,6 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: afeaac79600dad555822fa170f5747c6e434bdf9
+PODFILE CHECKSUM: bad16b24562f45641a5587cd4db3c8b5b8b6f101
 
 COCOAPODS: 1.4.0

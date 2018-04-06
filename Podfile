@@ -13,6 +13,7 @@ target 'Reuse' do
   pod 'Material', '~> 2.0'
   pod 'SnapKit', '~> 4.0.0'
   pod 'AIFlatSwitch', '~> 1.0.1'
+  pod 'Eureka'
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
