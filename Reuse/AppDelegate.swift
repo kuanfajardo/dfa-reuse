@@ -32,6 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         authUI?.providers = providers
         Session.session.authUI = authUI
 
+//        UINavigationBar.appearance().barTintColor = Colors.mintColor
+//        UINavigationBar.appearance().tintColor = .white
+//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+//        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
         return true
     }
 

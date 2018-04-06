@@ -15,7 +15,6 @@ class BrowseCollectionViewController: UICollectionViewController {
     fileprivate let itemsPerRow: CGFloat = 2
     fileprivate let itemSpacing: CGFloat = 5
     fileprivate let sectionInsets = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
-
     
     // Properties
     let searchController = UISearchController(searchResultsController: nil)
@@ -31,7 +30,20 @@ class BrowseCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
+        
         // Do any additional setup after loading the view.
+//        Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { (timer) in
+//            let tvc = MessagesTableViewController()
+//            tvc.tableView.frame = CGRect(x: 0 , y: self.view.frame.height, width: self.view.frame.width, height: self.view.frame.height)
+//
+//            self.view.addSubview(tvc.tableView)
+//
+//            tvc.tableView.frame = CGRect(x: 0 , y: self.view.frame.height / 2, width: self.view.frame.width, height: self.view.frame.height)
+//        }.fire()
+//
+
+        self.navigationItem.rightBarButtonItem?.target = self
+        self.navigationItem.rightBarButtonItem?.action = #selector(filterButtonPress)
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,6 +107,11 @@ class BrowseCollectionViewController: UICollectionViewController {
         
         return cell
     }
+    
+    @objc func filterButtonPress() -> Void {
+        print("I was clicked")
+    }
+    
 
     // MARK: UICollectionViewDelegate
 

@@ -125,7 +125,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="203" height="203"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCG-PO-ABg" customClass="EdgeInsetLabel" customModule="Reuse" customModuleProvider="target">
-                                            <rect key="frame" x="168.5" y="178" width="26.5" height="17"/>
+                                            <rect key="frame" x="154.5" y="168" width="40.5" height="27"/>
                                             <color key="backgroundColor" red="0.0001623570267" green="0.00049571700509999997" blue="0.00024241533000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,7 +146,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgj-iH-ur9" customClass="EdgeInsetLabel" customModule="Reuse" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="8" width="33.5" height="17"/>
+                                            <rect key="frame" x="8" y="8" width="47.5" height="27"/>
                                             <color key="backgroundColor" name="MintColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,7 +192,11 @@
                             <outlet property="delegate" destination="oFJ-Ht-Gb7" id="1mB-OQ-Dsk"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Browse" id="25m-YQ-xfp"/>
+                    <navigationItem key="navigationItem" title="Browse" id="25m-YQ-xfp">
+                        <barButtonItem key="rightBarButtonItem" title="FilterItem" image="FilterIcon" id="wSv-hf-uLB">
+                            <color key="tintColor" name="MintColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YuC-o5-eu6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -567,12 +571,16 @@
     </scenes>
     <resources>
         <image name="BrowseIcon" width="25" height="25"/>
+        <image name="FilterIcon" width="25" height="25"/>
         <image name="ItemsIcon" width="25" height="25"/>
         <image name="MessagesIcon" width="25" height="25"/>
         <image name="NotificationIcon" width="25" height="25"/>
         <image name="ProfileIcon" width="25" height="25"/>
         <image name="brennan.lee.thehalfasian" width="240" height="240"/>
         <image name="shoe" width="900" height="600"/>
+        <namedColor name="MintColor">
+            <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="MintColor">
             <color red="0.18199999629999999" green="0.69400000569999998" blue="0.52999997139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

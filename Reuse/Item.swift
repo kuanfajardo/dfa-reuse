@@ -24,7 +24,7 @@ class Item {
     
     //MARK: Initialization
     
-    init(title: String, location: String, targetGroup: String, condition: String, price: Float, tags: Array<String> = [], description: String, photos: Array<UIImage> = [], seller: String) {
+    init?(title: String, location: String, targetGroup: String, condition: String, price: Float, tags: Array<String> = [], description: String, photos: Array<UIImage> = [], seller: String) {
         // The title must not be empty
         guard !title.isEmpty else {
             return nil
