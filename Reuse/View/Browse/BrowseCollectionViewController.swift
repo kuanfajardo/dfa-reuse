@@ -41,9 +41,22 @@ class BrowseCollectionViewController: UICollectionViewController {
 //            tvc.tableView.frame = CGRect(x: 0 , y: self.view.frame.height / 2, width: self.view.frame.width, height: self.view.frame.height)
 //        }.fire()
 //
-
-        self.navigationItem.rightBarButtonItem?.target = self
-        self.navigationItem.rightBarButtonItem?.action = #selector(filterButtonPress)
+        
+        // Set bar button item actions
+        for i in 0..<self.navigationItem.rightBarButtonItems!.count {
+            let barItem = self.navigationItem.rightBarButtonItems![i]
+            barItem.target = self
+            
+            switch i {
+                case 0:
+                    barItem.action = #selector(filterButtonPress)
+                case 1:
+                    barItem.action = #selector(freeButtonPress)
+                default:
+                    // Handle error
+                    print("Should not get here! Only 2 bar button items")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,7 +122,11 @@ class BrowseCollectionViewController: UICollectionViewController {
     }
     
     @objc func filterButtonPress() -> Void {
-        print("I was clicked")
+        print("Filter button was pressed")
+    }
+    
+    @objc func freeButtonPress() -> Void {
+        print("Free button was pressed")
     }
     
 
