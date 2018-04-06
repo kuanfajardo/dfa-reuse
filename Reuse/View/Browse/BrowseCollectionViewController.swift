@@ -19,6 +19,18 @@ class BrowseCollectionViewController: UICollectionViewController {
     // Properties
     let searchController = UISearchController(searchResultsController: nil)
     
+    var freeButtonSelected: Bool = false {
+        didSet {
+            let freeBarButtonItem = self.navigationItem.rightBarButtonItems?[1]
+            
+            if freeButtonSelected {
+                freeBarButtonItem?.tintColor = Colors.mintColor
+            } else {
+                freeBarButtonItem?.tintColor = Colors.disabledColor
+            }
+        }
+    }
+    
     // Storyboard
     
     // Filtering View
@@ -113,6 +125,7 @@ class BrowseCollectionViewController: UICollectionViewController {
     
     @objc func freeButtonPress() -> Void {
         print("Free button was pressed")
+        self.freeButtonSelected = !self.freeButtonSelected
     }
 
     // MARK: UICollectionViewDelegate

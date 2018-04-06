@@ -14,12 +14,17 @@ class FilterFormViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Filter"
+        // Set "Done" button target
+        let doneBarButtonItem = self.navigationItem.rightBarButtonItem
+        doneBarButtonItem?.target = self
+        doneBarButtonItem?.action = #selector(doneButtonPressed)
         
+        
+        // Form presets
         SliderRow.defaultCellUpdate = { cell, row in cell.slider.tintColor = Colors.mintColor }
         CheckRow.defaultCellUpdate = { cell, row in cell.tintColor = Colors.mintColor }
         
-        // Make form
+        // Make Form
         form
         
         // Sorting
@@ -69,5 +74,9 @@ class FilterFormViewController: FormViewController {
                 row.maximumValue = 1500
                 row.steps = 300
             }
+    }
+    
+    @objc func doneButtonPressed() {
+        self.navigationController?.presentationController?.presentingViewController.dismiss(animated: true, completion: nil)
     }
 }

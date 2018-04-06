@@ -34,6 +34,7 @@ struct Images {
 
 struct Colors {
     static let mintColor = UIColor(named: "MintColor")!
+    static let disabledColor = UIColor(named: "GrayColor")!
 }
 
 struct Segues {

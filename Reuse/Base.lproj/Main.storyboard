@@ -203,7 +203,7 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="FreeIcon" id="Yrr-uY-2N3">
-                                <color key="tintColor" name="MintColor"/>
+                                <color key="tintColor" name="GrayColor"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -333,7 +333,7 @@
             </objects>
             <point key="canvasLocation" x="3320.8000000000002" y="336.88155922038982"/>
         </scene>
-        <!--Filter Form View Controller-->
+        <!--Filter-->
         <scene sceneID="BqF-CP-aqi">
             <objects>
                 <viewController id="lDn-lX-Tw5" customClass="FilterFormViewController" customModule="Reuse" customModuleProvider="target" sceneMemberID="viewController">
@@ -343,7 +343,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="XbT-cv-SWn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ovJ-Up-0fK"/>
+                    <navigationItem key="navigationItem" title="Filter" id="ovJ-Up-0fK">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="LHi-Lj-1YX">
+                            <color key="tintColor" name="MintColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nB-bc-emS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -742,6 +746,12 @@
         <image name="ProfileIcon" width="25" height="25"/>
         <image name="brennan.lee.thehalfasian" width="240" height="240"/>
         <image name="shoe" width="900" height="600"/>
+        <namedColor name="GrayColor">
+            <color red="0.51800000667572021" green="0.5820000171661377" blue="0.58600002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="MintColor">
+            <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="MintColor">
             <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
