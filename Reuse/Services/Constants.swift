@@ -39,4 +39,5 @@ struct Colors {
 
 struct Segues {
     static let filterSegue = "ShowFilterMenu"
+    static let tabControllerSegue = "ShowTabController"
 }

@@ -23,6 +23,13 @@ class LoginViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.tabControllerSegue {
+            let tabBarController = segue.destination as! UITabBarController
+            tabBarController.selectedIndex = 2;
+        }
+    }
    
     
     // MARK: Actions

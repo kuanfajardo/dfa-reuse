@@ -483,7 +483,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="es2-PF-CBa" kind="showDetail" action="showViewController:sender:" id="1yY-Z8-cH9"/>
+                                    <segue destination="es2-PF-CBa" kind="showDetail" identifier="ShowTabController" action="showViewController:sender:" id="1yY-Z8-cH9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u28-tE-LfN">
@@ -755,6 +755,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1yY-Z8-cH9"/>
-        <segue reference="6rh-yb-l8l"/>
+        <segue reference="CTZ-Cj-PCe"/>
     </inferredMetricsTieBreakers>
 </document>
