@@ -41,25 +41,24 @@ class FilterFormViewController: FormViewController {
         // Filtering
         +++ Section("Filter By")
             // Categories
-            <<< PushRow<String>() { row in
+            <<< MultipleSelectorRow<String>() { row in
                 row.title = "Categories"
                 row.options = ["All Categories", "Home and Living", "School Supplies", "Appliances", "Kitchen", "Clothes"]
-                row.value = "All Categories"
+                row.value = ["All Categories"]
                 row.selectorTitle = "Categories"
-            }.onPresent { (from: FormViewController, to: SelectorViewController<SelectorRow<PushSelectorCell<String>>>) in
+            }.onPresent { (from: FormViewController, to: MultipleSelectorViewController<GenericMultipleSelectorRow<String, PushSelectorCell<Set<String>>>>) in
                     to.selectableRowCellSetup = { cell, row in cell.tintColor = Colors.mintColor }
             }
             
             // Condition
-            <<< PushRow<String>() { row in
+            <<< MultipleSelectorRow<String>() { row in
                 row.title = "Condition"
                 row.options = ["Any Condition", "New", "Like New", "Good", "Used", "Shit"]
-                row.value = "Any Condition"
+                row.value = ["Any Condition"]
                 row.selectorTitle = "Condition"
-                }.onPresent { (from: FormViewController, to: SelectorViewController<SelectorRow<PushSelectorCell<String>>>) in
+                }.onPresent { (from: FormViewController, to: MultipleSelectorViewController<GenericMultipleSelectorRow<String, PushSelectorCell<Set<String>>>>) in
                     to.selectableRowCellSetup = { cell, row in cell.tintColor = Colors.mintColor }
                 }
-        
             // Price
             // TODO : Add range slider
             <<< SliderRow() {

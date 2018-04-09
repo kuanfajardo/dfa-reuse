@@ -752,9 +752,6 @@
         <namedColor name="MintColor">
             <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="MintColor">
-            <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1yY-Z8-cH9"/>
