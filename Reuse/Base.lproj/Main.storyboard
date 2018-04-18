@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6EJ-2Y-lzK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6EJ-2Y-lzK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -483,7 +483,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="es2-PF-CBa" kind="showDetail" identifier="ShowTabController" action="showViewController:sender:" id="1yY-Z8-cH9"/>
+                                    <segue destination="es2-PF-CBa" kind="showDetail" identifier="ShowTabController" id="1yY-Z8-cH9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u28-tE-LfN">
@@ -549,10 +549,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jp-rt-Blq">
-                                <rect key="frame" x="159" y="590" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Register"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jp-rt-Blq">
+                                <rect key="frame" x="147" y="587" width="80" height="30"/>
+                                <color key="backgroundColor" name="MintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="MFE-NO-2cl"/>
+                                </constraints>
+                                <color key="tintColor" name="MintColor"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="es2-PF-CBa" kind="showDetail" id="8C2-CX-Rvh"/>
                                 </connections>
@@ -582,13 +588,27 @@
                                 <rect key="frame" x="16" y="189" width="343" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0Y-6L-ZKh">
-                                <rect key="frame" x="124" y="392" width="127" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add profile picture"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0Y-6L-ZKh">
+                                <rect key="frame" x="117" y="387" width="140" height="30"/>
+                                <color key="backgroundColor" name="MintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="fZp-ab-qRS"/>
+                                </constraints>
+                                <color key="tintColor" name="MintColor"/>
+                                <state key="normal" title="Add profile picture">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9jp-rt-Blq" firstAttribute="top" secondItem="u0Y-6L-ZKh" secondAttribute="bottom" constant="170" id="DBT-Qc-SdV"/>
+                            <constraint firstItem="6he-T2-EGs" firstAttribute="bottom" secondItem="9jp-rt-Blq" secondAttribute="bottom" constant="50" id="GRF-Pw-j8N"/>
+                            <constraint firstItem="u0Y-6L-ZKh" firstAttribute="leading" secondItem="6he-T2-EGs" secondAttribute="leading" constant="117" id="NOO-Hs-L2e"/>
+                            <constraint firstItem="9jp-rt-Blq" firstAttribute="leading" secondItem="6he-T2-EGs" secondAttribute="leading" constant="147" id="OUy-aV-8Fn"/>
+                            <constraint firstItem="6he-T2-EGs" firstAttribute="trailing" secondItem="u0Y-6L-ZKh" secondAttribute="trailing" constant="118" id="aQk-vS-hpS"/>
+                            <constraint firstItem="6he-T2-EGs" firstAttribute="trailing" secondItem="9jp-rt-Blq" secondAttribute="trailing" constant="148" id="mtT-CY-OJ1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6he-T2-EGs"/>
                     </view>
                     <connections>
@@ -752,9 +772,12 @@
         <namedColor name="MintColor">
             <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <namedColor name="MintColor">
+            <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1yY-Z8-cH9"/>
+        <segue reference="8C2-CX-Rvh"/>
         <segue reference="CTZ-Cj-PCe"/>
     </inferredMetricsTieBreakers>
 </document>
