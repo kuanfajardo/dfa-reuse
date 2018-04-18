@@ -57,41 +57,55 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="jsmith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXe-or-cAn">
-                                <rect key="frame" x="162" y="372" width="51" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jsmith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXe-or-cAn">
+                                <rect key="frame" x="164.5" y="417.5" width="46" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moO-PI-KbL">
-                                <rect key="frame" x="162" y="551" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moO-PI-KbL">
+                                <rect key="frame" x="167.5" y="551" width="40" height="30"/>
+                                <color key="backgroundColor" name="MintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="0eU-uK-fKd"/>
+                                </constraints>
+                                <color key="tintColor" name="MintColor"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Residence: Next House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKO-et-F5b">
-                                <rect key="frame" x="95" y="408" width="184" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Residence: Next House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKO-et-F5b">
+                                <rect key="frame" x="98.5" y="456" width="178" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Looking for: couches, clothing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRn-B2-Ryt">
-                                <rect key="frame" x="70" y="487" width="234" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking for: couches, clothing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRn-B2-Ryt">
+                                <rect key="frame" x="72.5" y="494.5" width="230.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab9-OB-VVO">
-                                <rect key="frame" x="141" y="312" width="89" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab9-OB-VVO">
+                                <rect key="frame" x="144.5" y="379" width="86.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lcI-GT-E9R" firstAttribute="bottom" secondItem="moO-PI-KbL" secondAttribute="bottom" constant="37" id="7p4-nL-s8O"/>
+                            <constraint firstItem="sXe-or-cAn" firstAttribute="top" secondItem="ab9-OB-VVO" secondAttribute="bottom" constant="18" id="JJk-8o-W0w"/>
+                            <constraint firstItem="moO-PI-KbL" firstAttribute="centerX" secondItem="Wz9-UE-ETw" secondAttribute="centerX" id="Nru-DM-HdG"/>
+                            <constraint firstItem="nRn-B2-Ryt" firstAttribute="top" secondItem="HKO-et-F5b" secondAttribute="bottom" constant="18" id="Nva-1C-UkL"/>
+                            <constraint firstItem="HKO-et-F5b" firstAttribute="top" secondItem="sXe-or-cAn" secondAttribute="bottom" constant="18" id="YGl-2g-yzl"/>
+                            <constraint firstItem="moO-PI-KbL" firstAttribute="top" secondItem="nRn-B2-Ryt" secondAttribute="bottom" constant="36" id="bn7-4m-P5S"/>
+                            <constraint firstItem="ab9-OB-VVO" firstAttribute="centerX" secondItem="Wz9-UE-ETw" secondAttribute="centerX" id="bvR-ft-ueM"/>
+                            <constraint firstItem="nRn-B2-Ryt" firstAttribute="centerX" secondItem="Wz9-UE-ETw" secondAttribute="centerX" id="bxb-rT-RdI"/>
+                            <constraint firstItem="HKO-et-F5b" firstAttribute="centerX" secondItem="Wz9-UE-ETw" secondAttribute="centerX" id="muY-Kf-6PM"/>
+                            <constraint firstItem="sXe-or-cAn" firstAttribute="centerX" secondItem="Wz9-UE-ETw" secondAttribute="centerX" id="xNs-sB-vv5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lcI-GT-E9R"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="A2S-f6-IDH"/>
@@ -604,10 +618,8 @@
                         <constraints>
                             <constraint firstItem="9jp-rt-Blq" firstAttribute="top" secondItem="u0Y-6L-ZKh" secondAttribute="bottom" constant="170" id="DBT-Qc-SdV"/>
                             <constraint firstItem="6he-T2-EGs" firstAttribute="bottom" secondItem="9jp-rt-Blq" secondAttribute="bottom" constant="50" id="GRF-Pw-j8N"/>
-                            <constraint firstItem="u0Y-6L-ZKh" firstAttribute="leading" secondItem="6he-T2-EGs" secondAttribute="leading" constant="117" id="NOO-Hs-L2e"/>
-                            <constraint firstItem="9jp-rt-Blq" firstAttribute="leading" secondItem="6he-T2-EGs" secondAttribute="leading" constant="147" id="OUy-aV-8Fn"/>
-                            <constraint firstItem="6he-T2-EGs" firstAttribute="trailing" secondItem="u0Y-6L-ZKh" secondAttribute="trailing" constant="118" id="aQk-vS-hpS"/>
-                            <constraint firstItem="6he-T2-EGs" firstAttribute="trailing" secondItem="9jp-rt-Blq" secondAttribute="trailing" constant="148" id="mtT-CY-OJ1"/>
+                            <constraint firstItem="9jp-rt-Blq" firstAttribute="centerX" secondItem="H2S-cN-hDh" secondAttribute="centerX" id="cxC-ip-1TV"/>
+                            <constraint firstItem="u0Y-6L-ZKh" firstAttribute="centerX" secondItem="H2S-cN-hDh" secondAttribute="centerX" id="oWP-M7-HsP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6he-T2-EGs"/>
                     </view>
@@ -768,9 +780,6 @@
         <image name="shoe" width="900" height="600"/>
         <namedColor name="GrayColor">
             <color red="0.51800000667572021" green="0.5820000171661377" blue="0.58600002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="MintColor">
-            <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="MintColor">
             <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
