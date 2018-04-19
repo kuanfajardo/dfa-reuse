@@ -9,6 +9,7 @@
 import UIKit
 
 private let reuseIdentifier = ReuseIdentifiers.browseCell
+private let demoData = DemoItem.getAllDemoItems()
 
 class BrowseCollectionViewController: UICollectionViewController {
     // Constants
@@ -85,7 +86,7 @@ class BrowseCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // TODO: Actually set based on data
-        let numberOfDataItems = 20
+        let numberOfDataItems = demoData.count
         
         return numberOfDataItems
     }
@@ -96,19 +97,13 @@ class BrowseCollectionViewController: UICollectionViewController {
         // Configure the cell
         
         // TODO: Populate with real data
-        cell.itemImage.image = Images.shoeImage
-        cell.priceLabel.text = "$100"
+        let demoItem = demoData[indexPath.row]
         
+        cell.itemImage.image = demoItem.image
+        cell.priceLabel.text = demoItem.priceString
+        cell.priceLabel.isHidden = demoItem.isFree
+        cell.freeLabel.isHidden = !demoItem.isFree
         
-        let rand = arc4random_uniform(2)
-        
-        if rand == 0 { // FREE
-            cell.priceLabel.isHidden = true
-            cell.freeLabel.isHidden = false
-        } else {
-            cell.priceLabel.isHidden = false
-            cell.freeLabel.isHidden = true
-        }
         
         // Customized Graphic Feature
         cell.priceLabel.layer.masksToBounds = true

@@ -24,6 +24,7 @@
 		567D0635205748590023D644 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D0634205748590023D644 /* LoginViewController.swift */; };
 		567F04D1205C177F00C11D9F /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567F04D0205C177F00C11D9F /* MessagesTableViewController.swift */; };
 		567F04D3205C1D8E00C11D9F /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567F04D2205C1D8E00C11D9F /* MessagesTableViewCell.swift */; };
+		56B055312089459E008FF96E /* DemoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B055302089459E008FF96E /* DemoItem.swift */; };
 		56B444F020771D8300070133 /* FilterFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B444EF20771D8300070133 /* FilterFormViewController.swift */; };
 		56B444F420773FB100070133 /* FilteringPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B444F320773FB100070133 /* FilteringPresentationManager.swift */; };
 		56B444F6207740EE00070133 /* FilteringPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B444F5207740EE00070133 /* FilteringPresentationController.swift */; };
@@ -60,6 +61,7 @@
 		567D0634205748590023D644 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		567F04D0205C177F00C11D9F /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		567F04D2205C1D8E00C11D9F /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		56B055302089459E008FF96E /* DemoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoItem.swift; sourceTree = "<group>"; };
 		56B444EF20771D8300070133 /* FilterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFormViewController.swift; sourceTree = "<group>"; };
 		56B444F320773FB100070133 /* FilteringPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringPresentationManager.swift; sourceTree = "<group>"; };
 		56B444F5207740EE00070133 /* FilteringPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringPresentationController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		5660D6C22050496800743E1D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				56B055302089459E008FF96E /* DemoItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				5660D6C620504A6A00743E1D /* Constants.swift in Sources */,
 				560CAA1F207DD5010059B61A /* ItemsViewController.swift in Sources */,
 				567D0635205748590023D644 /* LoginViewController.swift in Sources */,
+				56B055312089459E008FF96E /* DemoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

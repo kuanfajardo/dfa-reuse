@@ -27,10 +27,10 @@ class ItemsTableViewController: UITableViewController {
     }
     
     // TODO: Replace with real data
-    var data: [[Any]] = [
-        [[0, 1, 2], [0, 1]],
-        [[0], [0, 1, 2, 3, 4, 5]],
-        [0, 1, 2, 3, 4, 5, 6, 7]
+    var demoData: [[[DemoItem]]] = [
+        [DemoItem.getDemoItems(forSegment: .buying, forSection: 0), DemoItem.getDemoItems(forSegment: .buying, forSection: 1)],
+        [DemoItem.getDemoItems(forSegment: .selling, forSection: 0), DemoItem.getDemoItems(forSegment: .selling, forSection: 1)],
+        [DemoItem.getDemoItems(forSegment: .following, forSection: 0)],
     ]
     
     override func viewDidLoad() {
@@ -60,29 +60,43 @@ class ItemsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch selectedSegment {
-        case .following:
-            return data[2].count
-        default:
-            return (data[selectedSegment.rawValue][section] as! [Int]).count
-        }
+        return (demoData[selectedSegment.rawValue][section]).count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let demoItem = demoData[selectedSegment.rawValue][indexPath.section][indexPath.row]
+        
         switch selectedSegment {
         case .buying:
             let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.buyingItemCell, for: indexPath) as! BuyingItemTableViewCell
+            
+            cell.titleLabel.text = demoItem.name
+            cell.priceLabel.text = demoItem.priceString
+            cell.conditionLabel.text = demoItem.condition.rawValue
+            cell.locationLabel.text = demoItem.locationString
+            cell.itemImageView.image = demoItem.image
             
             return cell
             
         case .selling:
             let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.sellingItemCell, for: indexPath) as! SellingItemTableViewCell
             
+            cell.titleLabel.text = demoItem.name
+            cell.priceLabel.text = demoItem.priceString
+            cell.followersLabel.text = demoItem.followersString
+            cell.itemImageView.image = demoItem.image
+            
             return cell
             
         case .following:
             let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.followingItemCell, for: indexPath) as! FollowingItemTableViewCell
+            
+            cell.titleLabel.text = demoItem.name
+            cell.priceLabel.text = demoItem.priceString
+            cell.conditionLabel.text = demoItem.condition.rawValue
+            cell.locationLabel.text = demoItem.locationString
+            cell.itemImageView.image = demoItem.image
             
             return cell
         }

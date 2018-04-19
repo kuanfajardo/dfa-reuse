@@ -172,7 +172,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BrowseItemCell" id="ecm-le-S5E" customClass="BrowseCollectionViewCell" customModule="Reuse" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="BrowseItemCell" id="ecm-le-S5E" customClass="BrowseCollectionViewCell" customModule="Reuse" customModuleProvider="target">
                                 <rect key="frame" x="86" y="0.0" width="203" height="203"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -180,11 +180,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoe" translatesAutoresizingMaskIntoConstraints="NO" id="YfQ-Xv-Au8">
-                                            <rect key="frame" x="0.0" y="0.0" width="203" height="203"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="203" height="87"/>
                                             <gestureRecognizers/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCG-PO-ABg" customClass="EdgeInsetLabel" customModule="Reuse" customModuleProvider="target">
-                                            <rect key="frame" x="154.5" y="168" width="40.5" height="27"/>
+                                            <rect key="frame" x="154.5" y="52" width="40.5" height="27"/>
                                             <color key="backgroundColor" red="0.0001623570267" green="0.00049571700509999997" blue="0.00024241533000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1069,7 +1069,7 @@
         <image name="NotificationIcon" width="25" height="25"/>
         <image name="ProfileIcon" width="25" height="25"/>
         <image name="brennan.lee.thehalfasian" width="240" height="240"/>
-        <image name="shoe" width="900" height="600"/>
+        <image name="shoe" width="1800" height="1200"/>
         <namedColor name="GrayColor">
             <color red="0.57300001382827759" green="0.57300001382827759" blue="0.57300001382827759" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

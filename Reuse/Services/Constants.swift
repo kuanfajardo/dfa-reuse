@@ -50,3 +50,11 @@ struct ReuseIdentifiers {
     static let sellingItemCell = "SellingItemCell"
     static let followingItemCell = "FollowingItemCell"
 }
+
+enum ItemCondition: String {
+    case new = "New"
+    case likeNew = "Like New"
+    case good = "Good"
+    case used = "Used"
+    case shit = "Shit"
+}
