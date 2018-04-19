@@ -73,6 +73,8 @@ class FilterFormViewController: FormViewController {
                 row.value = 120
                 row.maximumValue = 1500
                 row.steps = 300
+            }
+        
             // Condition
             <<< MultipleSelectorRow<String>() { row in
                 row.title = "Condition"
@@ -81,8 +83,6 @@ class FilterFormViewController: FormViewController {
                 row.selectorTitle = "Condition"
             }.onPresent { (from: FormViewController, to: MultipleSelectorViewController<GenericMultipleSelectorRow<String, PushSelectorCell<Set<String>>>>) in
                 to.selectableRowCellSetup = { cell, row in cell.tintColor = Colors.mintColor }
-            }
-        
             }
     }
     
