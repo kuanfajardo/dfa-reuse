@@ -42,3 +42,11 @@ struct Segues {
     static let tabControllerSegue = "ShowTabController"
     static let itemsTVCSegue = "EmbedItemsTVC"
 }
+
+struct ReuseIdentifiers {
+    static let messageCell = "MessageCell"
+    static let browseCell = "BrowseItemCell"
+    static let buyingItemCell = "BuyingItemCell"
+    static let sellingItemCell = "SellingItemCell"
+    static let followingItemCell = "FollowingItemCell"
+}

@@ -25,7 +25,7 @@ class ItemsViewController: UIViewController {
     // MARK: Actions
     @IBAction func action(sender: UIControl, forEvent event: UIEvent) {
         if let _ = sender as? UISegmentedControl {
-            self.tableViewController?.selectedSegmentIndex = segmentedControl.selectedSegmentIndex
+            self.tableViewController?.selectedSegment = ItemSegment(rawValue: segmentedControl.selectedSegmentIndex)!
         }
     }
     

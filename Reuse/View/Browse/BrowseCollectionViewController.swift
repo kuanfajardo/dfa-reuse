@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "BrowseItemCell"
+private let reuseIdentifier = ReuseIdentifiers.browseCell
 
 class BrowseCollectionViewController: UICollectionViewController {
     // Constants

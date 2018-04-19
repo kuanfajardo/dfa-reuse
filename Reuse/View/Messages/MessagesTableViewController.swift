@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "MessageCell"
+private let reuseIdentifier = ReuseIdentifiers.messageCell
 private let testData = [
     [
         "messengerID": "brennan.lee.thehalfasian",

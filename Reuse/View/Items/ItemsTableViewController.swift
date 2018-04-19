@@ -8,12 +8,20 @@
 
 import UIKit
 
+private let reuseIdentifiers = [ReuseIdentifiers.buyingItemCell, ReuseIdentifiers.sellingItemCell, ReuseIdentifiers.followingItemCell]
+
+enum ItemSegment: Int {
+    case buying = 0
+    case selling = 1
+    case following = 2
+}
+
 class ItemsTableViewController: UITableViewController {
     
     // MARK: Properties
-    var selectedSegmentIndex: Int = 0 {          // 0 - "Buying", 1 - "Selling", 2 - "Following"
+    var selectedSegment: ItemSegment = ItemSegment.buying {
         didSet {
-            print(selectedSegmentIndex)
+            print(selectedSegment)
             tableView.reloadData()
         }
     }
@@ -43,8 +51,8 @@ class ItemsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        switch selectedSegmentIndex {
-        case 2:
+        switch selectedSegment {
+        case .following:
             return 1
         default:
             return 2
@@ -52,30 +60,41 @@ class ItemsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch selectedSegmentIndex {
-        case 2:
+        switch selectedSegment {
+        case .following:
             return data[2].count
         default:
-            return (data[selectedSegmentIndex][section] as! [Int]).count
+            return (data[selectedSegment.rawValue][section] as! [Int]).count
         }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.section), \(indexPath.row)"
-        // Configure the cell...
-
-        return cell
+        switch selectedSegment {
+        case .buying:
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.buyingItemCell, for: indexPath) as! BuyingItemTableViewCell
+            
+            return cell
+            
+        case .selling:
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.sellingItemCell, for: indexPath) as! SellingItemTableViewCell
+            
+            return cell
+            
+        case .following:
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.followingItemCell, for: indexPath) as! FollowingItemTableViewCell
+            
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch selectedSegmentIndex {
-        case 0:
+        switch selectedSegment {
+        case .buying:
             return section == 0 ? "Buying" : "Bought"
-        case 1:
+        case .selling:
             return section == 0 ? "Selling" : "Sold"
-        default:
+        case .following:
             return "Following"
         }
     }
