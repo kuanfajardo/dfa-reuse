@@ -56,9 +56,10 @@ class FilterFormViewController: FormViewController {
                 row.options = ["Any Condition", "New", "Like New", "Good", "Used", "Shit"]
                 row.value = ["Any Condition"]
                 row.selectorTitle = "Condition"
-                }.onPresent { (from: FormViewController, to: MultipleSelectorViewController<GenericMultipleSelectorRow<String, PushSelectorCell<Set<String>>>>) in
-                    to.selectableRowCellSetup = { cell, row in cell.tintColor = Colors.mintColor }
-                }
+            }.onPresent { (from: FormViewController, to: MultipleSelectorViewController<GenericMultipleSelectorRow<String, PushSelectorCell<Set<String>>>>) in
+                to.selectableRowCellSetup = { cell, row in cell.tintColor = Colors.mintColor }
+            }
+            
             // Price
             // TODO : Add range slider
             <<< SliderRow() {
@@ -72,6 +73,16 @@ class FilterFormViewController: FormViewController {
                 row.value = 120
                 row.maximumValue = 1500
                 row.steps = 300
+            // Condition
+            <<< MultipleSelectorRow<String>() { row in
+                row.title = "Condition"
+                row.options = ["East Campus", "West Campus", "Like New", "Good", "Used", "Shit"]
+                row.value = ["Any Condition"]
+                row.selectorTitle = "Condition"
+            }.onPresent { (from: FormViewController, to: MultipleSelectorViewController<GenericMultipleSelectorRow<String, PushSelectorCell<Set<String>>>>) in
+                to.selectableRowCellSetup = { cell, row in cell.tintColor = Colors.mintColor }
+            }
+        
             }
     }
     

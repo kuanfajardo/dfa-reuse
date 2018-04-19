@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4D0523F381A7D79F69242847 /* Pods_Reuse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0693D627A6EAB43C2249006 /* Pods_Reuse.framework */; };
+		560CAA1D207DD4D60059B61A /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560CAA1C207DD4D60059B61A /* ItemsTableViewController.swift */; };
+		560CAA1F207DD5010059B61A /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560CAA1E207DD5010059B61A /* ItemsViewController.swift */; };
 		561D097B204CE1FC002C9888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D097A204CE1FC002C9888 /* AppDelegate.swift */; };
 		561D0980204CE1FD002C9888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561D097E204CE1FC002C9888 /* Main.storyboard */; };
 		561D0983204CE1FD002C9888 /* Reuse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 561D0981204CE1FD002C9888 /* Reuse.xcdatamodeld */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		560CAA1C207DD4D60059B61A /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
+		560CAA1E207DD5010059B61A /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		561D0977204CE1FC002C9888 /* Reuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561D097A204CE1FC002C9888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		561D097F204CE1FC002C9888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		560CAA1B207DD4B00059B61A /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				560CAA1C207DD4D60059B61A /* ItemsTableViewController.swift */,
+				560CAA1E207DD5010059B61A /* ItemsViewController.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		561D096E204CE1FC002C9888 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +156,7 @@
 		5660D6C420504A4400743E1D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				560CAA1B207DD4B00059B61A /* Items */,
 				567F04CF205C16FB00C11D9F /* Messages */,
 				567F04CE205C16F000C11D9F /* Custom */,
 				567F04CD205C16D900C11D9F /* Browse */,
@@ -409,11 +423,13 @@
 				567F04D3205C1D8E00C11D9F /* MessagesTableViewCell.swift in Sources */,
 				56C0EB35205B636600CB8908 /* BrowseCollectionViewCell.swift in Sources */,
 				56B444F020771D8300070133 /* FilterFormViewController.swift in Sources */,
+				560CAA1D207DD4D60059B61A /* ItemsTableViewController.swift in Sources */,
 				56C2C6A22055F6E600CF981E /* User.swift in Sources */,
 				567F04D1205C177F00C11D9F /* MessagesTableViewController.swift in Sources */,
 				76D1A9322054D64300A1A4E2 /* Item.swift in Sources */,
 				561D097B204CE1FC002C9888 /* AppDelegate.swift in Sources */,
 				5660D6C620504A6A00743E1D /* Constants.swift in Sources */,
+				560CAA1F207DD5010059B61A /* ItemsViewController.swift in Sources */,
 				567D0635205748590023D644 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
