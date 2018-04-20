@@ -28,6 +28,8 @@ target 'Reuse' do
   pod 'FBSDKLoginKit'
 
   pod 'SwiftyJSON'
+
+  pod 'ViewRow', :git => 'https://github.com/EurekaCommunity/ViewRow'
 end
 
 post_install do |installer|

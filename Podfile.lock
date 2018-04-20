@@ -116,6 +116,8 @@ PODS:
   - Protobuf (3.5.0)
   - SnapKit (4.0.0)
   - SwiftyJSON (4.0.0)
+  - ViewRow (0.3.0):
+    - Eureka (>= 4.0.0)
 
 DEPENDENCIES:
   - AIFlatSwitch (~> 1.0.1)
@@ -134,15 +136,21 @@ DEPENDENCIES:
   - Material (~> 2.0)
   - SnapKit (~> 4.0.0)
   - SwiftyJSON
+  - ViewRow (from `https://github.com/EurekaCommunity/ViewRow`)
 
 EXTERNAL SOURCES:
   ChameleonFramework:
     :git: https://github.com/ViccAlexander/Chameleon.git
+  ViewRow:
+    :git: https://github.com/EurekaCommunity/ViewRow
 
 CHECKOUT OPTIONS:
   ChameleonFramework:
     :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
     :git: https://github.com/ViccAlexander/Chameleon.git
+  ViewRow:
+    :commit: 14e7b619859556c898e0337b161f7eb3a3eec682
+    :git: https://github.com/EurekaCommunity/ViewRow
 
 SPEC CHECKSUMS:
   AIFlatSwitch: 5ab22806eeff3e09d585c2f13d22bfa6e3427191
@@ -174,7 +182,8 @@ SPEC CHECKSUMS:
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  ViewRow: e278428ff53da5eab18b191d3e19a16f3e299fc1
 
-PODFILE CHECKSUM: bad16b24562f45641a5587cd4db3c8b5b8b6f101
+PODFILE CHECKSUM: 13a97493933c154b6d45360c7172d8b2a2ba41d1
 
 COCOAPODS: 1.4.0

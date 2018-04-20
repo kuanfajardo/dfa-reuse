@@ -59,6 +59,9 @@
                     <navigationItem key="navigationItem" title="Items" id="9ss-6h-N9L">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RsT-Wl-uRB">
                             <color key="tintColor" name="MintColor"/>
+                            <connections>
+                                <segue destination="Rhr-8U-sO0" kind="presentation" id="SVd-cR-bFT"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -449,7 +452,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Filter" id="ovJ-Up-0fK">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="LHi-Lj-1YX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="LHi-Lj-1YX">
                             <color key="tintColor" name="MintColor"/>
                         </barButtonItem>
                     </navigationItem>
@@ -1075,6 +1078,50 @@
             </objects>
             <point key="canvasLocation" x="3389.5999999999999" y="-460.56971514242883"/>
         </scene>
+        <!--Add Item-->
+        <scene sceneID="sfc-n5-lCH">
+            <objects>
+                <viewController id="A8Q-6K-x8c" customClass="AddItemViewController" customModule="Reuse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HMM-7N-Ss2"/>
+                        <viewControllerLayoutGuide type="bottom" id="JZY-KR-ei6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NJJ-9F-DXk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Item" id="ZdO-ET-Gnf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vZ3-Rl-IO3">
+                            <color key="tintColor" name="MintColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="igq-WK-8Pp">
+                            <color key="tintColor" name="MintColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nnx-w2-qcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4991" y="-382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TdC-HZ-WeU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rhr-8U-sO0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nig-Iy-b61">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A8Q-6K-x8c" kind="relationship" relationship="rootViewController" id="d49-Wy-AdV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebl-bJ-c1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4256" y="-381.40929535232385"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BrowseIcon" width="25" height="25"/>
@@ -1089,6 +1136,9 @@
         <image name="shoe" width="1800" height="1200"/>
         <namedColor name="GrayColor">
             <color red="0.57300001382827759" green="0.57300001382827759" blue="0.57300001382827759" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="MintColor">
+            <color red="0.18199999630451202" green="0.6940000057220459" blue="0.52999997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="MintColor">
             <color red="0.18199999629999999" green="0.69400000569999998" blue="0.52999997139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
