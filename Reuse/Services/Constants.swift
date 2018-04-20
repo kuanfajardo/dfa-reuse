@@ -41,6 +41,7 @@ struct Segues {
     static let filterSegue = "ShowFilterMenu"
     static let tabControllerSegue = "ShowTabController"
     static let itemsTVCSegue = "EmbedItemsTVC"
+    static let itemDetailSegue = "ShowItemDetail"
 }
 
 struct ReuseIdentifiers {

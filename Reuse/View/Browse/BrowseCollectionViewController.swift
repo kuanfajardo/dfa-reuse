@@ -54,6 +54,8 @@ class BrowseCollectionViewController: UICollectionViewController {
         let freeBarButtonItem = self.navigationItem.rightBarButtonItems?[1]
         freeBarButtonItem?.target = self
         freeBarButtonItem?.action = #selector(freeButtonPress)
+        
+        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -73,6 +75,16 @@ class BrowseCollectionViewController: UICollectionViewController {
             controller.modalPresentationStyle = .custom
             
             controller.navigationBar.tintColor = Colors.mintColor
+        }
+        
+        if segue.identifier == Segues.itemDetailSegue {
+            let controller = segue.destination as! ItemDetailViewController
+            let cell = sender as! BrowseCollectionViewCell
+            
+            let indexPath = collectionView?.indexPath(for: cell)
+            let itemIndex = (indexPath?.row)!
+            
+            controller.item = demoData[itemIndex]
         }
     }
     

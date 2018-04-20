@@ -21,7 +21,6 @@ class ItemsTableViewController: UITableViewController {
     // MARK: Properties
     var selectedSegment: ItemSegment = ItemSegment.buying {
         didSet {
-            print(selectedSegment)
             tableView.reloadData()
         }
     }
@@ -113,6 +112,37 @@ class ItemsTableViewController: UITableViewController {
         }
     }
 
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.itemDetailSegue {
+            let controller = segue.destination as! ItemDetailViewController
+            
+            let indexPath: IndexPath?
+            switch selectedSegment {
+            case .buying:
+                let cell = sender as! BuyingItemTableViewCell
+                indexPath = tableView?.indexPath(for: cell)
+            case .selling:
+                let cell = sender as! SellingItemTableViewCell
+                indexPath = tableView?.indexPath(for: cell)
+            case .following:
+                let cell = sender as! FollowingItemTableViewCell
+                indexPath = tableView?.indexPath(for: cell)
+            }
+            
+            let section = (indexPath?.section)!
+            let row = (indexPath?.row)!
+            
+            controller.item = demoData[selectedSegment.rawValue][section][row]
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -145,16 +175,6 @@ class ItemsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
     */
 }
